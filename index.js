@@ -29,8 +29,10 @@ app.post("/cafes", (req, res) => {
     }
 })
 
+
 app.put("/cafes/:id", (req, res) => {
     const cafe = req.body;
+    console.log(req.body);
     const { id } = req.params;
     if (id != cafe.id)
         return res

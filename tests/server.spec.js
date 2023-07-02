@@ -43,8 +43,8 @@ describe("Probando POST", () => {
 
 describe("Probando PUT", () => {
   it("Obtener 400 si id de café no existe", async () => {
-
-    const response = await request(server).put("/cafes/9").send();
+    const cafe={id:9,nombre:'Espresso'}    
+    const response = await request(server).put("/cafes/9").send(cafe);
     const status = response.statusCode;
     expect(status).toBe(400);
   }); 
